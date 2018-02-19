@@ -1,0 +1,48 @@
+@import "../../../common/common";
+
+.feed-item-container {
+  border: 1px solid $baseGreyColor;
+  width: 55vw;
+  height: 40vw;
+  margin-top: 30px;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+
+  .error-message {
+    font-size: 14px;
+    padding: 10px;
+    color: red;
+    flex: 1;
+  }
+
+  .section-header {
+    border-bottom: 1px solid $baseGreyColor;
+    padding: 6px;
+
+    .wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0 10px;
+      color: #6D7271;
+      height: 100%;
+
+      p {
+        background-color: #F8F8F8;
+        border-radius: 2px;
+        padding: 1px;
+      }
+    }
+  }
+
+  .video-block {
+    position: relative;
+  }
+
+  .absolute {
+    position: absolute;
+    top:0;
+    left: 0;
+  }
+}

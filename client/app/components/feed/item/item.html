@@ -1,0 +1,18 @@
+<div class="feed-item-container">
+    <div ng-if="$ctrl.hasErrors" class="error-message flex">{{$ctrl.errorMessage}}</div>
+    <div ng-if="!$ctrl.hasErrors" class="section-header">
+        <div class="wrapper">
+            <p class="title">{{$ctrl.data.title}}</p>
+            <p class="views">{{$ctrl.data.views | abbreviateNumber}}</p>
+        </div>
+    </div>
+    <div ng-if="!$ctrl.hasErrors" class="video-block full-w-h">
+        <div class="absolute full-w-h">
+            <facebook ng-if="$ctrl.data.source === 'facebook'" video-id="$ctrl.data.videoId"></facebook>
+            <youtube ng-if="$ctrl.data.source === 'youtube'" video-id="$ctrl.data.videoId"></youtube>
+            <video class="full-w-h" ng-if="$ctrl.data.source === 'url'" src="{{$ctrl.data.url}}" controls></video>
+        </div>
+    </div>
+</div>
+
+

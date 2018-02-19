@@ -1,0 +1,12 @@
+<div class="feed-container">
+  <div class="feed flex">{{$ctrl.title}}</div>
+  <div class="flex filter">
+    <label for="source">Filter by source: </label>
+    <select name="source" id="source"
+            ng-model="$ctrl.selectedSource" ng-options="x for x in $ctrl.sources">
+    </select>
+  </div>
+  <div class="feed-wrapper flex">
+    <item ng-show="([item] | filter: $ctrl.selectedSource === 'All' ? undefined : { source: $ctrl.selectedSource }).length" ng-repeat="item in $ctrl.feed " data="item"></item>
+  </div>
+</div>

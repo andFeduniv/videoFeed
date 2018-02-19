@@ -1,0 +1,21 @@
+@import "../../common/common";
+
+.feed-container {
+  .filter {
+    margin-top: 10px;
+  }
+  .feed {
+    width: 70vw;
+    background-color: #FAFAFA;
+    color: #BCC4CA;
+    height: 37px;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 11px;
+    border-bottom: 1px solid $baseGreyColor;
+  }
+
+  .feed-wrapper {
+    flex-direction: column;
+  }
+}
