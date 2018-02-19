@@ -1,12 +1,14 @@
 class FacebookController {
+
   constructor() {
     this.name = 'facebook';
+    this.blockId = 'fb-root';
   }
 
   $onInit() {
-    if (!document.getElementById('fb-root')) {
+    if (!document.getElementById(this.blockId)) {
       let div = document.createElement('div');
-      div.id = "fb-root";
+      div.id = this.blockId;
       document.body.appendChild(div);
 
       let d = document;
