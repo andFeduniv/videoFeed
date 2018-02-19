@@ -1,8 +1,9 @@
 class FeedController {
   constructor() {
     this.title = 'VIDEO FEED';
-    this.selectedSource = 'All';
-    this.sources = ['All'];
+    this.defaultSelectTitle = 'All';
+    this.selectedSource = this.defaultSelectTitle;
+    this.sources = [this.selectedSource];
 
     /// Todo: Move of the api call to a service
     fetch('https://cdn.playbuzz.com/content/feed/items').then(res => {

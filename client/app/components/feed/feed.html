@@ -7,6 +7,6 @@
     </select>
   </div>
   <div class="feed-wrapper flex">
-    <item ng-show="([item] | filter: $ctrl.selectedSource === 'All' ? undefined : { source: $ctrl.selectedSource }).length" ng-repeat="item in $ctrl.feed " data="item"></item>
+    <item ng-show="([item] | filter: $ctrl.selectedSource === $ctrl.defaultSelectTitle ? undefined : { source: $ctrl.selectedSource }).length" ng-repeat="item in $ctrl.feed " data="item"></item>
   </div>
 </div>
